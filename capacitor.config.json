@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "pi-8semestre-cliente",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

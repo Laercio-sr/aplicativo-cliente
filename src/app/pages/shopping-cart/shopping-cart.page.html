@@ -1,0 +1,32 @@
+<ion-header>
+  <app-toolbar [title]="'Carrinho de Compras'"></app-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="cart$ | async as c">
+    <ion-card-header>
+      <ion-card-title class="ion-text-end">"<b style="color: blue;">{{ c.totalItemsCount }}</b>" produtos no carrinho</ion-card-title>      
+    </ion-card-header>
+  </ion-card>
+  <ion-list *ngIf="items">
+    <ion-item >
+      <ion-label><b>Produtos</b></ion-label>
+      <ion-label class="ion-text-center"><b>Quantidade</b></ion-label>
+      <ion-label class="ion-text-end"><b>Valor</b></ion-label>
+    </ion-item>
+    <ion-item *ngFor="let item of items">
+      <ion-label>{{item.title}} </ion-label>
+      <ion-label class="ion-text-center">{{item.quantity}}</ion-label>
+      <ion-label class="ion-text-end">{{item.totalPrice | currency:'BRL':true }}</ion-label>
+    </ion-item>    
+  </ion-list>
+  <ion-card *ngIf="cart$ | async as c">
+    <ion-card-header>     
+      <ion-card-title class="ion-text-end"><b>Valor total: {{ c.totalPrice | currency: 'BRL': true }}</b></ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-item>
+    <ion-button slot="start" color="primary"  (click)=" addOrder()">Enviar Pedido</ion-button>
+    <ion-button slot="end" color="danger" (click)="clearCart()">Limpar carrinho</ion-button>
+  </ion-item>
+</ion-content>

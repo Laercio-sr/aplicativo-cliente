@@ -1,0 +1,16 @@
+<ion-card color="light" style="margin-top: 80px;">
+  <ion-card-header>    
+    <ion-card-title style="font-size: 25px; color: blue;" class="ion-text-center">{{ product.title }}</ion-card-title>
+    <img [src]="product.imgUrl"/> 
+    <ion-card-title class="ion-text-center">{{ product.price  | currency: 'BRL' }}</ion-card-title>
+    <p class="ion-text-center">{{product.description}}</p>
+  </ion-card-header>
+  <ion-card-content *ngIf="shoppingCart">
+    <ion-button shape="round" *ngIf="getQuantity() === -1; else updateQuantity" (click)="addToShoppingCart()" expand="block">
+    </ion-button>
+    <ng-template #updateQuantity>
+      <product-quantity [product]="product" [shopping-cart]="shoppingCart">
+      </product-quantity>
+    </ng-template>
+  </ion-card-content>
+</ion-card>

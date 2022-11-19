@@ -1,0 +1,8 @@
+{
+  "name": "pi-8semestre-cliente",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

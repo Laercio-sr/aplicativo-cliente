@@ -1,0 +1,29 @@
+<ion-content class="ion-padding ion-text-center">
+  <div class="container">
+    <div class="page-header">
+      <h1><b>Bem Vindo à</b></h1>
+      <h3><b>Tamara Materiais de Construção</b></h3>
+      <p><b>Sua loja virtual</b></p>
+    </div>
+    <img src="../../assets/img/tamaraConstrucao.jpg"/>
+    <div class="button-container">
+      <ion-button expand="block" class="main-button" routerLink="/login" routerDirection="forward">Login</ion-button>ou
+      <ion-grid>
+        <ion-row>
+          <ion-col>            
+          </ion-col>      
+            <ion-fab-button type="submit" color="danger" (click)="loginGoogle()" shape="round">G</ion-fab-button>
+          <ion-col>            
+          </ion-col>
+        </ion-row>        
+      </ion-grid>
+      <ion-row>
+        <ion-col> 
+          <ion-button expand="block" color="dark" fill="clear" routerLink="/register" routerDirection="forward">Criar Conta
+            <ion-icon style="font-size: 2em; margin-top: 0px;" name="add-circle"></ion-icon>
+          </ion-button>   
+        </ion-col>
+      </ion-row>
+    </div>    
+  </div>    
+</ion-content>

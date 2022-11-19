@@ -1,0 +1,11 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="2">
+        <ion-button color="danger" expand="block" (click)="removeShoppingCart()">-</ion-button>
+    </ion-col>
+    <ion-col class="ion-text-center">{{ getQuantity() }} - no carrinho</ion-col>
+    <ion-col size="2">
+        <ion-button expand="block" (click)="addToShoppingCart()">+</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
